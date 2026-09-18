@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-start: #f97316;
+  --color-brand-mid: #ec4899;
+  --color-brand-end: #8b5cf6;
+  --font-sans: "Poppins", sans-serif;
+}
+body {
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background-image: linear-gradient(90deg, var(--color-brand-start), var(--color-brand-mid), var(--color-brand-end));
+  }
+  .text-brand-gradient {
+    background-image: linear-gradient(90deg, var(--color-brand-start), var(--color-brand-mid), var(--color-brand-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
